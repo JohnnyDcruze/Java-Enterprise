@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>InsertPage</title>
+</head>
+<body>
+	<center>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<div class="form-container">
+		<h4 class="insert-header">Insert page</h4>
+		<form action="InsertServlet" method="post">
+				Enter part id: <input name="partid" type="text" /><br/><br/>
+				Enter part name: <input name="pname" type="text"/><br/><br/>
+				Enter color: <input name="color" type="text"/><br/><br/>
+				<input type="submit" value="Insert" class="insert-button"/><br/>
+		</form><br>
+		
+		<h4 class="insert-header">Update page</h4>
+		<form action="UpdateServlet" method="post">
+				Enter part id: <input name="partid" type="text" /><br/><br/>
+				Enter part name: <input name="pname" type="text"/><br/><br/>
+				Enter color: <input name="color" type="text"/><br/><br/>
+				<input type="submit" value="update" class="update-button"/><br/><br>	
+		</form><br>
+		
+		<h4 class="insert-header">Delete page</h4>
+		<form action="DeleteServlet" method="post">
+				Enter part id: <input name="partid" type="text" /><br/><br/>
+				<!--Enter part name: <input name="pname" type="text"/><br/><br/>
+				Enter color: <input name="color" type="text"/><br/><br/>-->
+				<input type="submit" value="delete" class="delete-button"/><br/>	
+		</form>
+	</div>
+	</center>
+</body>
+</html>
