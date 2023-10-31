@@ -19,6 +19,8 @@ public class TicketBooking {
 	    private String toLocation;
 	    private Date TravelDate;
 	    private String travelClass;
+	    private String Journey;
+	    private double ticketPrice;
 		public Long getId() {
 			return id;
 		}
@@ -40,8 +42,8 @@ public class TicketBooking {
 		public Date getTravelDate() {
 			return TravelDate;
 		}
-		public void setTravelDate(Date TravelDate) {
-			this.TravelDate = TravelDate;
+		public void setTravelDate(Date date) {
+			TravelDate = date;
 		}
 		public String getTravelClass() {
 			return travelClass;
@@ -49,5 +51,43 @@ public class TicketBooking {
 		public void setTravelClass(String travelClass) {
 			this.travelClass = travelClass;
 		}
+		public String getJourney() {
+			return Journey;
+		}
+		public void setJourney(String journey) {
+			Journey = journey;
+		}
+		public double getTicketPrice() {
+			return ticketPrice;
+		}
+		public void setTicketPrice(double ticketPrice) {
+			this.ticketPrice = ticketPrice;
+		}
+		public TicketBooking(Long id, String fromLocation, String toLocation, Date travelDate, String travelClass,
+				String journey, double ticketPrice) {
+			super();
+			this.id = id;
+			this.fromLocation = fromLocation;
+			this.toLocation = toLocation;
+			TravelDate = travelDate;
+			this.travelClass = travelClass;
+			Journey = journey;
+			this.ticketPrice = ticketPrice;
+		}
+		public TicketBooking() {
+			super();
+		}
+		public TicketBooking(String fromLocation, String toLocation, Date travelDate, String travelClass,
+				String journey, double ticketPrice) {
+			super();
+			this.fromLocation = fromLocation;
+			this.toLocation = toLocation;
+			TravelDate = travelDate;
+			this.travelClass = travelClass;
+			Journey = journey;
+			this.ticketPrice = ticketPrice;
+		}
+		
+
 
 }

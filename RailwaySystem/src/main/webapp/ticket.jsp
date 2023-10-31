@@ -9,7 +9,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: blue;
+            background-color: #f1f1f1;
         }
         h2 {
             text-align: center;
@@ -20,8 +20,9 @@
         }
         .ticket {
             width: 300px;
-            margin: 0 auto;
-            border: 1px solid #000;
+            margin: 20px auto;
+            border: 2px solid #002d74;
+            background-color: #fff;
             padding: 10px;
         }
         p {
@@ -31,6 +32,7 @@
             background-color: #002d74;
             color: #fff;
             padding: 5px;
+            text-align: center;
         }
         .class {
             text-align: center;
@@ -40,6 +42,10 @@
             margin: 0;
             padding: 5px;
         }
+        .ticket-details {
+            text-align: center;
+            font-size: 16px;
+        }
     </style>
 </head>
 <body>
@@ -47,8 +53,10 @@
     <div class="ticket">
         <p class="from-to">From: ${ticketBooking.fromLocation}</p>
         <p class="from-to">To: ${ticketBooking.toLocation}</p>
-        <p>Date: ${ticketBooking.travelDate}</p>
+        <p class="from-to">Date: ${ticketBooking.travelDate}</p>
         <p class="class">Class: ${ticketBooking.travelClass}</p>
+        <p class="ticket-details">Journey Type: ${ticketBooking.journey}</p>
+        <p class="ticket-details">Ticket Price: ${ticketBooking.ticketPrice}</p>
     </div>
 </body>
 </html>

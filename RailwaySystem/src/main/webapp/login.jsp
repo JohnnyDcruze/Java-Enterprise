@@ -3,14 +3,26 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Railway login interface</title>
+<title>Railway Login Interface</title>
 
 <style>
     body {
         font-family: Arial, sans-serif;
-        background-color: #f0f0f0;
+        background: linear-gradient(135deg, #fcff4b, #adff2f);
         margin: 0;
         padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    .login-container {
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        padding: 20px;
+        width: 300px;
         text-align: center;
     }
 
@@ -18,30 +30,21 @@
         color: #333;
     }
 
-    form {
-        background-color: #fff;
-        border-radius: 5px;
-        padding: 20px;
-        width: 300px;
-        margin: 0 auto;
-        text-align: left;
-    }
-
     input[type="text"],
     input[type="password"] {
-        width: 100%;
+        width: 80%;
         padding: 10px;
-        margin: 5px 0;
+        margin: 10px 0;
         border: 1px solid #ccc;
-        border-radius: 3px;
+        border-radius: 5px;
     }
 
     input[type="submit"] {
         background-color: #007bff;
         color: #fff;
-        padding: 10px 20px;
+        padding: 12px 20px;
         border: none;
-        border-radius: 3px;
+        border-radius: 5px;
         cursor: pointer;
     }
 
@@ -52,13 +55,17 @@
 
 </head>
 <body>
-<h2>Users Login Page</h2>
-<form action="/login" method="post">
-    User Name<br>
-    <input type="text" name="user"><br>
-    Password<br>
-    <input type="password" name="pass"><br>
-    <input type="submit" value="Login">
-</form>
+<div class="login-container">
+    <h2>Admin Login Page</h2>
+    <form action="/login" method="post">
+        <label for="user">Admin Name</label>
+        <input type="text" id="user" name="user" required>
+
+        <label for="pass">Password</label>
+        <input type="password" id="pass" name="pass" required>
+
+        <input type="submit" value="Login">
+    </form>
+</div>
 </body>
 </html>
